@@ -1,4 +1,4 @@
-`const BACKEND_URL = "[https://nuxus-workspace-backend-1.onrender.com](https://nuxus-workspace-backend-1.onrender.com)";`<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -104,5 +104,6 @@ function closeModal(){$('#modalRoot').innerHTML=''}
 function deleteItem(arr,i){if(!confirm('Remove this item?'))return;db[arr].splice(i,1);save();renderPage(currentPage);toast('Item removed')}
 function wirePage(){let os=$('#orderSearch');if(os)os.oninput=()=>{$$('.data-table tbody tr').forEach(r=>r.style.display=r.innerText.toLowerCase().includes(os.value.toLowerCase())?'':'none')};let cs=$('#clientSearch');if(cs)cs.oninput=()=>{$$('.data-table tbody tr').forEach(r=>r.style.display=r.innerText.toLowerCase().includes(cs.value.toLowerCase())?'':'none')}}
 function globalSearch(v){if(!v)return;let page=currentPage;let rows=$$('.data-table tbody tr');rows.forEach(r=>r.style.display=r.innerText.toLowerCase().includes(v.toLowerCase())?'':'none')}
+const BACKEND_URL = "[https://nuxus-workspace-backend-1.onrender.com](https://nuxus-workspace-backend-1.onrender.com)";
 </script>
 </body></html>
